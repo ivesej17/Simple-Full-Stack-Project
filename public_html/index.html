@@ -1,0 +1,48 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="styles.css" rel="stylesheet"/>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+
+    <h1>Ives Wholesale Dealers</h1>
+    <h2>Search Products</h2>
+    <body>
+        <form action="resultspage.php" method="post" id="productForm" autocomplete="on">
+            <!-- Product name -->
+            <label for="productName">Product Name</label>
+            <input name="productName" type="text" id="productName">
+            <!-- Warehouse City -->
+            <label for="warehouseCity">Warehouse City</label>
+            <input name="warehouseCity" type="text" id = "warehouseCity">
+            <!-- Quantity Container -->
+            <div class="quantity">
+                <div>
+                    <label for="minQuantity">Minimum Quantity</label>
+                    <input name="minQuantity" type="number" id="minQuantity">
+                </div>
+                <div>
+                    <label for="maxQuantity">Maximum Quantity</label>
+                    <input name="maxQuantity" type="number" id="maxQuantity" min="1">
+                </div>
+            </div>
+            <!-- Price Container -->
+            <div class="price">
+                <div>
+                    <label for="minPrice">Minimum Price</label>
+                    <input name="minPrice" type="number" id="minPrice">
+                </div>
+                <div>
+                    <label for="maxPrice">Maximum Price</label>
+                    <input name="maxPrice" type="number" id="maxPrice">
+                </div>
+            </div>
+             <!-- Form Buttons -->
+            <div class="formButtons">
+                <button type="submit" formmethod="post" id="searchButton">Search Products</button>
+                <button type="button" onclick="clearInputs()">Clear Inputs</button>
+            </div>
+        </form>
+    </body>
+</html>
